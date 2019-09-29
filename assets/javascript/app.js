@@ -3,6 +3,7 @@ var topics = ["Cat", "Dog", "Cow", "Sheep", "Moose", "Lion", "Turtle", "Pig", "B
   //document wrapper 
   $(document).ready(function() {
 
+
 // displaytopicInfo function re-renders the HTML to display the  content
 function displayTopicInfo() {
 
@@ -49,11 +50,40 @@ function displayTopicInfo() {
        var imgURL = results[i].images.fixed_height.url;
 
 //     // Creating an element to hold the image
-       var image = $("<img>");
+       var image = $("<img>")
+       image.attr({
+       "src": imgURL,
+				"data-still": results[i].images.original_still.url,
+				"data-animate": results[i].images.original.url,
+				"data-state": "still",
+        "class": "gif"
+      //  "src", imgURL
+      });
+
+      
+  $(".gif").on("click", function() {
+
+    console.log("gif clicked"); 
+    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    var state = $(this).attr("data-state");
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+      
+    }
+
+  });
+
+     // image.attr("src", imgURL);
+     // image.attr("alt", "topic image");
 
        // Setting the image src attribute to imageUrl
-       image.attr("src", imgURL);
-       image.attr("alt", "topic image");
        
       // Appending the image
       topicDiv.append(image);
@@ -64,6 +94,8 @@ function displayTopicInfo() {
    });
 
  }
+
+
 
  // Function for displaying topic data
  function renderButtons() {
@@ -84,10 +116,12 @@ function displayTopicInfo() {
      a.attr("data-name", topics[i]);
      // Providing the initial button text
      a.text(topics[i]);
+     
      // Adding the button to the buttons-view div
      $("#buttons-view").append(a);
    }
   }
+
 
 // // This function handles events where a topic button is clicked
  $("#add-topic").on("click", function(event) {
@@ -108,4 +142,7 @@ $(document).on("click", ".topic-btn", displayTopicInfo);
 
 // // Calling the renderButtons function to display the intial buttons
 renderButtons();
+
+
 });
+
