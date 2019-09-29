@@ -1,4 +1,13 @@
+body {
+    background-image: url("../images/green_gobbler.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+  }
+ 
+
 #topics-view {
+    margin-top: 50px; 
     position: relative;
     overflow: hidden;
 }
@@ -10,6 +19,31 @@ img {
 
 .topic {
     float: left; 
-
 }
 
+/* #topic-input{
+    float: right; 
+} */
+
+#topic-form{
+    float: right; 
+}
+
+#add-topic{
+    float: right; 
+}
+
+.topic-btn{
+
+    margin-right: 5px; 
+}
+
+label {
+    font-size: 16px;
+    position: absolute;
+    transform: translate(0, -30px) scale(1);
+    font-weight: bold;
+  }
+
+
+  

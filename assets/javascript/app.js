@@ -87,7 +87,7 @@ function displayTopicInfo() {
      // Adding the button to the buttons-view div
      $("#buttons-view").append(a);
    }
-}
+  }
 
 // // This function handles events where a topic button is clicked
  $("#add-topic").on("click", function(event) {
@@ -98,13 +98,14 @@ function displayTopicInfo() {
 //   // Adding topic from the textbox to our array
    topics.push(topic);
 
-//   // Calling renderButtons which handles the processing of our topic array
-   renderButtons();
- });
+
+ //   // Calling renderButtons which handles the processing of our topic array
+ renderButtons();
+});
 
 // // Adding a click event listener to all elements with a class of "topic-btn"
- $(document).on("click", ".topic-btn", displayTopicInfo);
+$(document).on("click", ".topic-btn", displayTopicInfo);
 
 // // Calling the renderButtons function to display the intial buttons
- renderButtons();
-}); 
+renderButtons();
+});
