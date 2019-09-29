@@ -33,10 +33,11 @@ button{
 }
 
 img {
-    display: block;
+    /* display: block; */
     width: auto ;
-    max-width: 100% ;
-    height: auto ;
+    max-width: 100% ; 
+    width: 250px;
+    height: auto;
 }
 
 .topic {

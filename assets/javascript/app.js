@@ -47,7 +47,7 @@ function displayTopicInfo() {
        topicDiv.append(pOne);
 
 //     // Retrieving the URL for the image
-       var imgURL = results[i].images.fixed_height.url;
+       var imgURL = results[i].images.original.url;
 
 //     // Creating an element to hold the image
        var image = $("<img>")
@@ -60,7 +60,7 @@ function displayTopicInfo() {
       //  "src", imgURL
       });
 
-      
+      $(document).ready(function() {
   $(".gif").on("click", function() {
 
     console.log("gif clicked"); 
@@ -79,6 +79,7 @@ function displayTopicInfo() {
     }
 
   });
+});
 
      // image.attr("src", imgURL);
      // image.attr("alt", "topic image");
