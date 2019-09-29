@@ -1,92 +1,114 @@
-
-
-
-var animals = ["Cow", "Sheep", "Moose", "Lion"];
+var topics = ["Cow", "Sheep", "Moose", "Lion"];
 
   //document wrapper 
   $(document).ready(function() {
 
-// displayanimalInfo function re-renders the HTML to display the appropriate content
-function displayAnimalInfo() {
+// displaytopicInfo function re-renders the HTML to display the appropriate content
+function displayTopicInfo() {
 
-  var animal = $(this).attr("animal-name");
-  var queryURL = "https://www.omdbapi.com/?t=" + animal + "&apikey=trilogy";
+  var topic = $(this).attr("data-name");
+  
+  var api = 'https://api.giphy.com/v1/gifs/search?';
 
-  // Creating an AJAX call for the specific animal button being clicked
+  var limit = '&limit=25';
+
+  var key = 'api_key=ZX2nFAngcwSZ3yPNLC9dFOA7jWxaU0X1&q=';
+
+  var rating = '&rating=G';
+
+  var queryURL = api + key + topic + limit + rating;
+
+
+  console.log(topic); 
+
+  console.log(queryURL); 
+
+
+  // Creating an AJAX call for the specific topic button being clicked
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
 
-    // Creating a div to hold the animal
-    var animalDiv = $("<div class='animal'>");
+        console.log(response); 
 
-    // Storing the rating data
-    var rating = response.Rated;
 
-    // Creating an element to have the rating displayed
-    var pOne = $("<p>").text("Rating: " + rating);
+//     // Creating a div to hold the topic
+     var topicDiv = $("<div class='topic'>");
 
-    // Displaying the rating
-    animalDiv.append(pOne);
+//     // Storing the rating data
+      var rating = response.data[0].rating;
 
-    // Retrieving the URL for the image
-    var imgURL = response.Poster;
+//     // Creating an element to have the rating displayed
+      var pOne = $("<p>").text("Rating: " + rating);
 
-    // Creating an element to hold the image
-    var image = $("<img>").attr("src", imgURL);
+      console.log(rating); 
 
-    // Appending the image
-    animalDiv.append(image);
+//     // Displaying the rating
+       topicDiv.append(pOne);
 
-    // Putting the entire animal above the previous animals
-    $("#animals-view").prepend(animalDiv);
-  });
+//     // Retrieving the URL for the image
+       var imgURL = response.data[0].url;
 
+       console.log(imgURL); 
+  
+
+//     // Creating an element to hold the image
+       var image = $("<img>");
+
+       // Setting the image src attribute to imageUrl
+       image.attr("src", imgURL);
+       image.attr("alt", "topic image");
+       
+//     // Appending the image
+      topicDiv.append(image);
+
+//     // Putting the entire topic above the previous topics
+     $("#topics-view").prepend(topicDiv);
+   });
+
+ }
+
+// // Function for displaying topic data
+ function renderButtons() {
+
+//   // Deleting the topics prior to adding new topics
+//   // (this is necessary otherwise you will have repeat buttons)
+   $("#buttons-view").empty();
+
+//   // Looping through the array of topics
+   for (var i = 0; i < topics.length; i++) {
+
+//     // Then dynamicaly generating buttons for each topic in the array
+//     // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+     var a = $("<button>");
+//     // Adding a class of topic-btn to our button
+     a.addClass("topic-btn");
+//     // Adding a data-attribute
+     a.attr("data-name", topics[i]);
+//     // Providing the initial button text
+     a.text(topics[i]);
+//     // Adding the button to the buttons-view div
+     $("#buttons-view").append(a);
+   }
 }
 
-// Function for displaying animal data
-function renderButtons() {
+// // This function handles events where a topic button is clicked
+ $("#add-topic").on("click", function(event) {
+   event.preventDefault();
+//   // This line grabs the input from the textbox
+   var topic = $("#topic-input").val().trim();
 
-  // Deleting the animals prior to adding new animals
-  // (this is necessary otherwise you will have repeat buttons)
-  $("#buttons-view").empty();
+//   // Adding topic from the textbox to our array
+   topics.push(topic);
 
-  // Looping through the array of animals
-  for (var i = 0; i < animals.length; i++) {
+//   // Calling renderButtons which handles the processing of our topic array
+   renderButtons();
+ });
 
-    // Then dynamicaly generating buttons for each animal in the array
-    // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-    var a = $("<button>");
-    // Adding a class of animal-btn to our button
-    a.addClass("animal-btn");
-    // Adding a data-attribute
-    a.attr("data-name", animals[i]);
-    // Providing the initial button text
-    a.text(animals[i]);
-    // Adding the button to the buttons-view div
-    $("#buttons-view").append(a);
-  }
-}
+// // Adding a click event listener to all elements with a class of "topic-btn"
+ $(document).on("click", ".topic-btn", displayTopicInfo);
 
-// This function handles events where a animal button is clicked
-$("#add-animal").on("click", function(event) {
-  event.preventDefault();
-  // This line grabs the input from the textbox
-  var animal = $("#animal-input").val().trim();
-
-  // Adding animal from the textbox to our array
-  animals.push(animal);
-
-  // Calling renderButtons which handles the processing of our animal array
-  renderButtons();
-});
-
-// Adding a click event listener to all elements with a class of "animal-btn"
-$(document).on("click", ".animal-btn", displayAnimalInfo);
-
-// Calling the renderButtons function to display the intial buttons
-renderButtons();
-
-
+// // Calling the renderButtons function to display the intial buttons
+ renderButtons();
 }); 
