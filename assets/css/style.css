@@ -4,29 +4,41 @@ body {
     width: 100%;
     height: 100%;
   }
- 
 
-#topics-view {
+#buttons-view{
     margin-top: 50px; 
-    position: relative;
+    margin-bottom: 30px; 
+    margin-left: 40px; 
+}
+
+.container{
+    margin-top: 20px; 
+}
+ 
+#topics-view {
+    margin-top: 70px; 
     overflow: hidden;
+    padding-left: 20px; 
 }
 
 img {
-    width: 100%;
     display: block;
+    width: auto ;
+    max-width: 100% ;
+    height: auto ;
 }
 
 .topic {
     float: left; 
 }
 
-/* #topic-input{
-    float: right; 
-} */
+
 
 #topic-form{
+    padding-top: 15px; 
     float: right; 
+    margin-right: 70px; 
+    margin-left: 15px; 
 }
 
 #add-topic{
@@ -46,4 +58,66 @@ label {
   }
 
 
+h1.title{
+    float: left; 
+    margin-bottom: 1.0000em;
+    padding-top: 30px; 
+    color: white; 
+}
+
+  /*style for columns when display is max-width 768px */
+  @media screen and (max-width: 758px) {
+    h1.title {
+      font-size: 2.0em; 
+    }
+  }
   
+
+@media screen and (max-width: 640px) {
+    #topics-view{
+      height: auto;
+      width:100%;
+      margin-bottom: 70px; 
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #topic-form{
+    float: left; 
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    h1.title{
+    font-size: 1.25em; 
+    
+    
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #buttons-view{
+        float: left; 
+        margin: 1.0em; 
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .topic-btn{
+        float: left; 
+    }
+  }
+
+
+
+
+  img.animated-gif{
+    width: 200px;
+    height: auto;
+    float: right; 
+  }
+
+header{
+    background-color: black; 
+    height: 115px; 
+}
