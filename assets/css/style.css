@@ -1,0 +1,15 @@
+#topics-view {
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.topic {
+    float: left; 
+
+}
+
