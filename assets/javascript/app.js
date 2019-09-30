@@ -47,7 +47,7 @@ function displayTopicInfo() {
        topicDiv.append(pOne);
 
 //     // Retrieving the URL for the image
-       var imgURL = results[i].images.original.url;
+       var imgURL = results[i].images.original_still.url;
 
 //     // Creating an element to hold the image
        var image = $("<img>")
