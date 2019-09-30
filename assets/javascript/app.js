@@ -7,6 +7,8 @@ var topics = ["Cat", "Dog", "Cow", "Sheep", "Moose", "Lion", "Turtle", "Pig", "B
 // displaytopicInfo function re-renders the HTML to display the  content
 function displayTopicInfo() {
 
+  $("#topics-view").empty();
+
   //parameters that make up the queryURL
   var topic = $(this).attr("data-name");
   var api = 'https://api.giphy.com/v1/gifs/search?';
@@ -78,7 +80,6 @@ function displayTopicInfo() {
 
  // Function for displaying topic data
  function renderButtons() {
-
    // Deleting the topics prior to adding new topics
    // (this is necessary otherwise you will have repeat buttons)
    $("#buttons-view").empty();
