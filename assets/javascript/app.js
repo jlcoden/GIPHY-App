@@ -43,9 +43,9 @@ function displayTopicInfo() {
       var title = results[i].title;
 
 //     // Creating an element to have the rating displayed
-      var pRating = $("<p>").text("Rating: " + rating);
+      var pRating = $("<p id ='pRating'></div>").text("Rating: " + rating);
 
-      var pTitle = $("<p>").text("Title: " + title);
+      var pTitle = $("<p id = 'pTitle'></div>").text("Title: " + title);
     
       //console.log rating
       console.log(rating); 

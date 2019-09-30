@@ -233,3 +233,13 @@ a:visited {
   outline:none
 }
 
+#pTitle{
+  background-color: white; 
+
+}
+
+#pRating{
+  background-color: white; 
+  margin: 0px; 
+  
+}
