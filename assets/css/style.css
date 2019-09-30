@@ -40,22 +40,31 @@ img {
     float: left; 
 }
 
+#topic-input{ 
+  float: right;
+  text-align: center; 
+  margin-right: 50px; 
+  padding-right: 22px; 
+}
+
 
 
 #topic-form{
     padding-top: 15px; 
     float: right; 
-    margin-right: 70px; 
-    margin-left: 15px; 
+  
 }
 
 #add-topic{
-    float: right; 
+    float: right;
+    margin-right: 190px; 
+    margin-top: 10px; 
+  
 }
 
 .topic-btn{
-
     margin-right: 5px; 
+
 }
 
 label {
@@ -178,6 +187,7 @@ input {
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
+ 
 }
 
 .topic-btn:hover {
@@ -190,5 +200,12 @@ border-radius: 20px;
 display: inline-block;
 border: none;
 transition: all 0.4s ease 0s;
+
 }
 
+
+a:visited {
+  outline: 0; 
+  border: none;
+  outline:none
+}
