@@ -7,10 +7,6 @@ body {
     padding: 0;
   }
 
-button{
-    margin-top: 8px; 
-    
-}
 
 .topic-btn{
     margin-top: 8px; 
@@ -19,11 +15,11 @@ button{
 #buttons-view{
     margin-top: 50px; 
     margin-bottom: 30px; 
-    margin-left: 40px; 
 }
 
 .container{
-    margin-top: 20px; 
+    margin-top: 20px;
+    padding-left: 0px;  
 }
  
 #topics-view {
@@ -75,6 +71,7 @@ h1.title{
     margin-bottom: 1.0000em;
     padding-top: 30px; 
     color: white; 
+    padding-left: 100px; 
 }
 
   /*style for columns when display is max-width 768px */
@@ -96,16 +93,37 @@ h1.title{
   @media screen and (max-width: 640px) {
     #topic-form{
     float: left; 
+    margin-right: 0px; 
     }
   }
 
   @media screen and (max-width: 640px) {
     h1.title{
-    font-size: 1.25em; 
-    
+    font-size: 1em; 
+    float: left; 
+    padding: 0; 
+    background-color: black; 
+    width: 30%; 
+    margin-top: 40px; 
+    text-align: center; 
+    padding-left: 10px; 
+    }
+  }
+
+
+  @media screen and (max-width: 640px) {
+    img.animated-gif{
+    width: 100px;
+    height: auto;
+    padding: 0px; 
+    margin: 0px; 
+    float: none; 
+   
     
     }
   }
+
+
 
   @media screen and (max-width: 640px) {
     #buttons-view{
@@ -123,6 +141,11 @@ h1.title{
 
 
 
+  
+
+
+
+
   img.animated-gif{
     width: 200px;
     height: auto;
@@ -132,4 +155,40 @@ h1.title{
 header{
     background-color: black; 
     height: 115px; 
+    padding: 0px; 
+    margin: 0px; 
 }
+
+button,
+div,
+form,
+input {
+  margin: 10px;
+}
+
+
+.topic-btn {
+  margin-top: 8px; 
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.topic-btn:hover {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+padding: 15px;
+border-radius: 20px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+

@@ -1,4 +1,4 @@
-var topics = ["Cat", "Dog", "Cow", "Sheep", "Moose", "Lion", "Turtle", "Pig", "Bear", "Giraffe"];
+var topics = ["Cat", "Dog", "Cow", "Sheep", "Moose", "Lion", "Turtle", "Pig", "Bear", "Giraffe", "Platypus", "Zebra"];
 
   //document wrapper 
   $(document).ready(function() {
