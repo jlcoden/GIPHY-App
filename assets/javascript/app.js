@@ -39,14 +39,22 @@ function displayTopicInfo() {
 //     // Storing the rating data
       var rating = results[i].rating;
 
+      //storing the GIF title
+      var title = results[i].title;
+
 //     // Creating an element to have the rating displayed
-      var pOne = $("<p>").text("Rating: " + rating);
+      var pRating = $("<p>").text("Rating: " + rating);
+
+      var pTitle = $("<p>").text("Title: " + title);
     
       //console.log rating
       console.log(rating); 
 
 //     // Displaying the rating
-       topicDiv.append(pOne);
+       topicDiv.append(pRating);
+
+
+       topicDiv.append(pTitle);
 
 //     // Retrieving the URL for the image
        var imgURL = results[i].images.original_still.url;
