@@ -76,9 +76,6 @@ function displayTopicInfo() {
  }
 
 
-
-
-
  // Function for displaying topic data
  function renderButtons() {
 

@@ -23,26 +23,23 @@ body {
 }
  
 #topics-view {
-    margin-top: 70px; 
+    margin-top: 150px; 
     overflow: hidden;
     padding-left: 20px; 
+    width: 100%;
+    
 }
 
 img {
     /* display: block; */
-    width: auto ;
-    max-width: 100% ; 
-    width: 250px;
+    width: auto; 
+    max-width: 300px;
     height: auto;
 }
 
-.topic {
-    float: left; 
-}
 
 #topic-input{ 
   float: right;
-  text-align: center; 
   margin-right: 50px; 
   padding-right: 22px; 
 }
@@ -50,17 +47,43 @@ img {
 
 
 #topic-form{
-    padding-top: 15px; 
     float: right; 
+    background-image: url("../images/backgroundDesign.jpg");
+    padding: 35px 0px 10px 10px;
+    margin-top: 10px;
+    background-image: 
+    
   
 }
 
 #add-topic{
-    float: right;
-    margin-right: 190px; 
+    margin-right: 180px; 
     margin-top: 10px; 
-  
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
 }
+
+#add-topic:hover {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 12px;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  
+  }
+
+  
 
 .topic-btn{
     margin-right: 5px; 
@@ -72,6 +95,7 @@ label {
     position: absolute;
     transform: translate(0, -30px) scale(1);
     font-weight: bold;
+    color: white; 
   }
 
 
@@ -94,7 +118,6 @@ h1.title{
 @media screen and (max-width: 640px) {
     #topics-view{
       height: auto;
-      width:100%;
       margin-bottom: 70px; 
     }
   }
@@ -146,6 +169,9 @@ h1.title{
         float: left; 
     }
   }
+  .topic {
+    float: left; 
+}
 
 
 
@@ -195,7 +221,7 @@ color: #fff !important;
 text-transform: uppercase;
 text-decoration: none;
 background: #60a3bc;
-padding: 15px;
+padding: 12px;
 border-radius: 20px;
 display: inline-block;
 border: none;
@@ -209,3 +235,4 @@ a:visited {
   border: none;
   outline:none
 }
+
