@@ -60,27 +60,6 @@ function displayTopicInfo() {
       //  "src", imgURL
       });
 
-      $(document).ready(function() {
-  $(".gif").on("click", function() {
-
-    console.log("gif clicked"); 
-    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    var state = $(this).attr("data-state");
-    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-    // Then, set the image's data-state to animate
-    // Else set src to the data-still value
-    if (state === "still") {
-      $(this).attr("src", $(this).attr("data-animate"));
-      $(this).attr("data-state", "animate");
-    } else {
-      $(this).attr("src", $(this).attr("data-still"));
-      $(this).attr("data-state", "still");
-      
-    }
-
-  });
-});
-
      // image.attr("src", imgURL);
      // image.attr("alt", "topic image");
 
@@ -95,6 +74,8 @@ function displayTopicInfo() {
    });
 
  }
+
+
 
 
 
@@ -120,9 +101,15 @@ function displayTopicInfo() {
      
      // Adding the button to the buttons-view div
      $("#buttons-view").append(a);
+  
    }
+   
+
   }
 
+
+
+ // });
 
 // // This function handles events where a topic button is clicked
  $("#add-topic").on("click", function(event) {
@@ -136,6 +123,7 @@ function displayTopicInfo() {
 
  //   // Calling renderButtons which handles the processing of our topic array
  renderButtons();
+
 });
 
 // // Adding a click event listener to all elements with a class of "topic-btn"
@@ -143,7 +131,26 @@ $(document).on("click", ".topic-btn", displayTopicInfo);
 
 // // Calling the renderButtons function to display the intial buttons
 renderButtons();
+});
 
+$(document).on("click", ".gif", function() {
+
+//$(".gif").on("click", function() {
+
+  console.log("gif clicked"); 
+  // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+  var state = $(this).attr("data-state");
+  // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+  // Then, set the image's data-state to animate
+  // Else set src to the data-still value
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+  
 
 });
 
