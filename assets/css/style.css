@@ -1,3 +1,4 @@
+  /* Styles for body */
 body {
     background-image: url("../images/green_gobbler.png");
     background-repeat: repeat;
@@ -7,47 +8,49 @@ body {
     padding: 0;
   }
 
-
+  /* Adding margin for div, form, and input elements */
   div,
   form,
   input {
     margin: 10px;
   }
 
-  
+
+/* Adding margin for div, form, and input elements */
 #buttons-view{
     margin-top: 50px; 
     margin-bottom: 30px; 
 }
-
+ 
+  /* Style for container that holds dynamically generated buttons */
 .container{
     margin-top: 20px;
     padding-left: 0px;  
 }
  
+  /* Style for div that holds generated topics/animal GIFs */
 #topics-view {
     margin-top: 150px; 
     overflow: hidden;
     width: 100%;
-    
 }
 
+/* Style for img tags */
 img {
-    /* display: block; */
     width: auto; 
     max-width: 300px;
     height: auto;
 }
 
 
+/* Style for topic-input on form */
 #topic-input{ 
   float: right;
   margin-right: 50px; 
   padding-right: 22px; 
 }
 
-
-
+/* Style for topic-form container that holds the form */
 #topic-form{
     float: right; 
     background-image: url("../images/green_gobbler.png");
@@ -55,8 +58,9 @@ img {
     margin-top: 10px;
 }
 
+/* Style for submit button to add topics */
 #add-topic{
-    margin-right: 180px; 
+    margin-right: 180px;  
     margin-top: 10px; 
     color: #fff !important;
     text-transform: uppercase;
@@ -68,6 +72,7 @@ img {
 }
 
 
+/* Style for form label */
 label {
     font-size: 18px;
     position: absolute;
@@ -78,6 +83,7 @@ label {
   }
 
 
+/* Style for h1 title tag */
 h1.title{
     float: left; 
     margin-bottom: 1.0000em;
@@ -85,6 +91,13 @@ h1.title{
     color: white; 
     padding-left: 100px; 
 }
+
+.topic {
+  float: left; 
+}
+
+
+
 
   /*style for columns when display is max-width 768px */
   @media screen and (max-width: 758px) {
@@ -148,10 +161,6 @@ h1.title{
         float: left; 
     }
   }
-  .topic {
-    float: left; 
-}
-
 
 
 
