@@ -8,10 +8,13 @@ body {
   }
 
 
-.topic-btn{
-    margin-top: 8px; 
-}
+  div,
+  form,
+  input {
+    margin: 10px;
+  }
 
+  
 #buttons-view{
     margin-top: 50px; 
     margin-bottom: 30px; 
@@ -25,7 +28,6 @@ body {
 #topics-view {
     margin-top: 150px; 
     overflow: hidden;
-    padding-left: 20px; 
     width: 100%;
     
 }
@@ -48,7 +50,7 @@ img {
 
 #topic-form{
     float: right; 
-    background-image: url("../images/backgroundDesign.jpg");
+    background-image: url("../images/green_gobbler.png");
     padding: 35px 0px 10px 10px;
     margin-top: 10px;
 }
@@ -62,37 +64,17 @@ img {
     background: #60a3bc;
     padding: 10px;
     border-radius: 15px;
-    display: inline-block;
     border: none;
-    transition: all 0.4s ease 0s;
 }
 
-#add-topic:hover {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #60a3bc;
-  padding: 12px;
-  border-radius: 20px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
-  
-  }
-
-  
-
-.topic-btn{
-    margin-right: 5px; 
-
-}
 
 label {
-    font-size: 16px;
+    font-size: 18px;
     position: absolute;
     transform: translate(0, -30px) scale(1);
     font-weight: bold;
     color: white; 
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
 
@@ -115,7 +97,7 @@ h1.title{
 @media screen and (max-width: 640px) {
     #topics-view{
       height: auto;
-      margin-bottom: 70px; 
+      margin: 0 auto;
     }
   }
 
@@ -123,12 +105,13 @@ h1.title{
     #topic-form{
     float: left; 
     margin-right: 0px; 
+    margin-left: 0px; 
     }
   }
 
   @media screen and (max-width: 640px) {
     h1.title{
-    font-size: 1em; 
+    font-size: 1.2em; 
     float: left; 
     padding: 0; 
     background-color: black; 
@@ -157,7 +140,6 @@ h1.title{
   @media screen and (max-width: 640px) {
     #buttons-view{
         float: left; 
-        margin: 1.0em; 
     }
   }
 
@@ -191,13 +173,6 @@ header{
     margin: 0px; 
 }
 
-button,
-div,
-form,
-input {
-  margin: 10px;
-}
-
 
 .topic-btn {
   margin-top: 8px; 
@@ -210,20 +185,7 @@ input {
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
- 
-}
-
-.topic-btn:hover {
-color: #fff !important;
-text-transform: uppercase;
-text-decoration: none;
-background: #60a3bc;
-padding: 12px;
-border-radius: 20px;
-display: inline-block;
-border: none;
-transition: all 0.4s ease 0s;
-
+  margin-right: 5px; 
 }
 
 
@@ -235,6 +197,7 @@ a:visited {
 
 #pTitle{
   background-color: white; 
+  margin: 0px; 
 
 }
 

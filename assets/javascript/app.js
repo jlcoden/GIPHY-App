@@ -115,10 +115,18 @@ function displayTopicInfo() {
 
 
 
+
+
  // });
 
 // // This function handles events where a topic button is clicked
  $("#add-topic").on("click", function(event) {
+
+    if ($.trim($("#topic-input").val()) === "") {
+        alert('You did not provide a word');
+        return false;
+    } else{
+
    event.preventDefault();
 //   // This line grabs the input from the textbox
    var topic = $("#topic-input").val().trim();
@@ -129,6 +137,7 @@ function displayTopicInfo() {
 
  //   // Calling renderButtons which handles the processing of our topic array
  renderButtons();
+}
 
 });
 
