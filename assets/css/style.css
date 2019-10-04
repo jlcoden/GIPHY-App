@@ -98,17 +98,15 @@ h1.title{
   float: left; 
 }
 
-
-
-
-  /*style for columns when display is max-width 768px */
-  @media screen and (max-width: 758px) {
+  /*style h1 title tag when max-width is 768px */
+  @media screen and (max-width: 768px) {
     h1.title {
       font-size: 2.0em; 
     }
   }
   
 
+/*style for topics-view when display is max-width 640px */
 @media screen and (max-width: 640px) {
     #topics-view{
       height: auto;
@@ -116,6 +114,8 @@ h1.title{
     }
   }
 
+  
+/*style for topics-form when display is max-width 640px */
   @media screen and (max-width: 640px) {
     #topic-form{
     float: left; 
@@ -124,6 +124,7 @@ h1.title{
     }
   }
 
+  /*style for h1.title when max-width 640px */
   @media screen and (max-width: 640px) {
     h1.title{
     font-size: 1.2em; 
@@ -137,7 +138,7 @@ h1.title{
     }
   }
 
-
+  /*style for img.animated-gif when max-width 640px */
   @media screen and (max-width: 640px) {
     img.animated-gif{
     width: 100px;
@@ -150,14 +151,14 @@ h1.title{
     }
   }
 
-
-
+  /*style for #buttons-view when max-width 640px */
   @media screen and (max-width: 640px) {
     #buttons-view{
         float: left; 
     }
   }
 
+  /*style for .topic-btn when max-width 640px */
   @media screen and (max-width: 640px) {
     .topic-btn{
         float: left; 
