@@ -43,11 +43,12 @@ img {
 }
 
 
-/* Style for topic-input on form */
+/* Style for topic-input field on form */
 #topic-input{ 
   float: right;
   margin-right: 50px; 
   padding-right: 22px; 
+  width: 240px; 
 }
 
 /* Style for topic-form container that holds the form */
@@ -92,6 +93,7 @@ h1.title{
     padding-left: 100px; 
 }
 
+/* Style for topic tag */
 .topic {
   float: left; 
 }
