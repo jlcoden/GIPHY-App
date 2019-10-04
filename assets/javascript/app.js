@@ -70,40 +70,15 @@ function displayTopicInfo() {
       //  "src", imgURL
       });
 
-     // image.attr("src", imgURL);
-     // image.attr("alt", "topic image");
-
-       // Setting the image src attribute to imageUrl
-       
       // Appending the image
-    //  topicDiv.append(image);
+      topicDiv.append(image);
 
      // Putting the entire topic above the previous topics
-   //  $("#topics-view").prepend(topicDiv);
-
- topicDiv.append(image);
- createGrid(2,3);
-
-}
-});
-
-}
-
-createGrid(2,3);
-function createGrid(rownum, colnum, topicDiv) {
-  var imgCnt = 0;
-  $('#topics-view').prepend('<div class="container-fluid">' + topicDiv + '</div>')
-  for (var rowIndex = 0; rowIndex < rownum; rowIndex++) {
-    $('#topics-view > div.container-fluid').append('<div class="row" id="row' + rowIndex + '"></div>');
-    for(var colIndex = 0; colIndex < colnum; colIndex++) {
-      $('#row' + rowIndex).append('<div class="col-md-4 col-sm-6"><img src="' + topics[imgCnt] + '" class="img-responsive" /></div>');
-      imgCnt++;
+     $("#topics-view").prepend(topicDiv);
     }
-  }
-}
+   });
 
-
-
+ }
 
 
  // Function for displaying topic data
@@ -133,11 +108,6 @@ function createGrid(rownum, colnum, topicDiv) {
 
   }
 
-
-
-
-
- // });
 
 // // This function handles events where a topic button is clicked
  $("#add-topic").on("click", function(event) {
